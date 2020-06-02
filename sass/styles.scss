@@ -94,6 +94,21 @@ main{
             &.active{
                 left: 0;
             }
+
+            li{
+
+                ul{
+                    display: none;
+
+                    li{
+                        width: 100%; background: rgba($blue-1, 0.1);
+                    }
+                }
+
+                &.active ul{
+                    position: relative;
+                }
+            }
         }
 
         .menu{

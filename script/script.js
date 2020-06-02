@@ -11,12 +11,11 @@ function init(){
     const menu = document.querySelector('nav > ul');
 
     menu.addEventListener('click', e => {        
+        
         let smenu = e.target.parentNode;
-
+        
         if(smenu.childNodes[1]){
             smenu.classList.toggle('active');
         }
-
-        console.log(smenu.className);
     })
 }
