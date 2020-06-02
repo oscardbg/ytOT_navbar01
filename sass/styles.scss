@@ -1,7 +1,71 @@
 /*■■■■■■■■■■■■■■■■■■■■■■■ Declarations */
+
+$blue-1: #2196f3;
+
 /*■■■■■■■■■■■■■■■■■■■■■■■ Core */
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; display: block; color: #fff;}
+body{font-family: Verdana, Geneva, Tahoma, sans-serif; background: #191919; color: #fff;}
+
 /*■■■■■■■■■■■■■■■■■■■■■■■ Initial */
+
+header{
+    position: absolute; top: 0; left: 0; padding: 0 100px; background: #292929; width: 100%;
+
+    .logo{
+        padding: 0; height: 50px; line-height: 50px; font-size: 24px; text-transform: uppercase; font-weight: bold; float: left;
+    }
+
+    nav{
+        float: right;
+    }
+
+    ul{
+        display: flex;
+
+        a{
+            height: 50px; padding: 0 20px; line-height: 50px;
+
+            &:hover, &.active{
+                background: $blue-1;
+            }
+        }
+    }
+
+    .menu{
+        float: right; font-size: 24px; line-height: 50px; cursor: pointer; display: none; padding: 0 10px;
+    }
+}
+
 /*■■■■■■■■■■■■■■■■■■■■■■■  */
 /*■■■■■■■■■■■■■■■■■■■■■■■  */
 /*■■■■■■■■■■■■■■■■■■■■■■■  */
-/*■■■■■■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■■■■■■ Media Queries */
+
+@media (max-width: 950px){
+    header{
+        padding: 0 20px;
+        
+        nav{
+            position: absolute; width: 100%; height: 90vh; top: 50px; left: -100%; background-color: #333; transition: 0.5s ease-in;
+
+            ul{
+                display: block; text-align: center;
+            }
+
+            a{
+                border-bottom: 1px solid rgba(#fff, 0.1);
+            }
+
+            &.active{
+                left: 0;
+            }
+        }
+
+        .menu{
+            display: block;
+        }
+    }
+}
