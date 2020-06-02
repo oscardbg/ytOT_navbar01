@@ -26,11 +26,39 @@ header{
         display: flex;
 
         a{
-            height: 50px; padding: 0 20px; line-height: 50px;
+            height: 50px; padding: 0 25px; line-height: 50px;
 
             &:hover, &.active{
                 background: $blue-1;
             }
+        }
+    }
+    
+    li{
+        position: relative;
+
+        ul{
+            position: absolute; left: 0; background: #333; display: none;
+
+            li{
+                width: 200px;
+            }
+        }
+
+        /* &:hover ul{
+            display: block;
+        } */
+
+        &.smenu:before{
+            content: "\f0d7"; position: absolute; font-family: fontAwesome; line-height: 50px; right: 5px;
+        }
+
+        &.active:before{
+            content: "\f0d8";
+        }
+
+        &.active ul{
+            display: block;
         }
     }
 
